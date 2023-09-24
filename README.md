@@ -1,1 +1,1 @@
-# QuestoesJava
+Repositório para questões em Java.
