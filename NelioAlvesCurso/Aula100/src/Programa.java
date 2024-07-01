@@ -43,6 +43,9 @@ public class Programa {
 		
 		if(verificador != 1) {
 			System.out.println("The employee id doesn't exist!");
+			for(Funcionario contador : lista) {
+				System.out.println(contador.toString());
+			}
 			System.exit(1);
 		}
 		
