@@ -21,12 +21,10 @@ public class Programa {
 			
 			while(line != null) {
 				String[] particao = line.split(",");
-				System.out.println(particao[0] + particao[1] + particao[2]);
 				Produto produto = new Produto(particao[0], Double.parseDouble(particao[1]));
-				System.out.println(produto);
 				
 				try(BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoEscrita, true))){
-					bw.write(produto.getNome() + "," + (produto.getPreço() * Double.parseDouble(particao[2])));
+					bw.write(produto.getNome() + "," + (produto.getPreço() * Integer.parseInt(particao[2])));
 					bw.newLine();
 				}
 				catch(IOException e){
